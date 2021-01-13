@@ -5,9 +5,17 @@
     color: getFontColor($colour-primary);
     border-radius: 25rem;
     text-decoration: none;
-    box-shadow:3px 3px 8px #999;
+    box-shadow: $b-shadow;
+    opacity: 1;
+    transition: all 0.3s ease 0s;
 
     @include font-style($font-size: 1rem, $font-weight : $f-w-semibold);
+
+    &:hover{
+        opacity: 0.8;
+        box-shadow: $b-shadow-hover;
+        //background-image: linear-gradient(lighten($colour-secondary, 5%), lighten($colour-primary, 5%));
+    }
 
 
 }

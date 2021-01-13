@@ -1,11 +1,9 @@
 .section-cta{
     background-color: $section-background;
-    padding: 2rem 0 3rem 0;
+    padding: $layout-margin;
     text-align: center;
-
     &__title{
-        padding: 0 2.5rem;
-        @include breakpoint(md){
+                @include breakpoint(md){
             font-size: 1.6rem;
             padding: 1rem 2.5rem 0 2.5rem;
         }
@@ -17,5 +15,38 @@
             margin: 1rem 0 2rem 0;
         }
     }
+}
+
+.section-tutorial{
+    background-color: $background-base;
+    padding: $layout-margin;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0 2rem;
+
+    &__card{
+        flex-basis: 100%;
+
+        @include breakpoint(md){
+            align-content: center;
+            &:nth-child(1){
+                text-align: center;
+                flex-basis: 100%;
+            }
+            &:nth-child(n+2){
+                min-width: 300px;
+                flex-basis: 30%;
+
+            }
+        }
+        &:nth-child(1){
+            margin-bottom: 1.5rem;
+        }
+    }
+
+
 
 }

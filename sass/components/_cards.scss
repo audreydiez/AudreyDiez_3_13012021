@@ -1,0 +1,47 @@
+.section-tutorial__card{
+    border-radius: 15px;
+    margin: 0.6rem 0;
+    &.card--styled{
+        background-color: $section-background;
+        box-shadow: $b-shadow;
+        padding: 1.2rem 0;
+        margin-left: 0.5rem;
+        line-height: 1.6rem;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        @include font-style($font-weight : $f-w-semibold, $font-size : 0.9rem);
+
+        .card__tile{
+            &:nth-child(1){
+                background-color: $colour-primary;
+                color: getFontColor($colour-primary);
+                border-radius: 50px;
+                width: 25px;
+                height: 25px;
+                text-align: center;
+                align-content: center;
+                margin-left: -0.5rem;
+            }
+            &:nth-child(2){
+                width: 55px;
+                text-align: center;
+                align-content: center;
+            }
+        }
+
+        i{
+            color: $font-colour-medium;
+        }
+
+    }
+    &.card--active{
+        background-color: $primary-active;
+        i{
+            color: $colour-primary;
+        }
+    }
+
+}

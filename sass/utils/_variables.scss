@@ -13,9 +13,14 @@ $footer-background : #353535;
 
 // Font colours
 $font-colour-light : #FFF;
+$font-colour-medium: #7E7E7E;
 $font-colour-dark : #000;
 
 $tag : #99E2D0;
+
+// Box shadows
+$b-shadow : 3px 3px 8px #D3D3D3;
+$b-shadow-hover : 3px 3px 8px #666;
 
 // Fonts basics variables
 $font-size-base: 14px;
@@ -33,14 +38,14 @@ $f-w-bold : 700;
 $font_size-h1 : 1.5rem;
 
 // H2 Styles
-$font-size-h2 : 1.2rem;
+$font-size-h2 : 1.4rem;
 
 // H3 Styles
 $font-size-h3 : 1.1rem;
 
 //Layout margin
 
-$layout-margin : 1.5rem;
+$layout-margin : 2.5rem 1.5rem;
 
 // Breakpoint for responsive
 $breakpoints:(
