@@ -1,33 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
 
 body {
-    @include font-style();
+    @include font-style($font-size : 1rem);
+    @include breakpoint(md){
+        @include font-style($font-size : 1.1rem);
+    }
 }
 
 h1 {
-    @include font-style(
-            $font-weight : $font-weight-bold,
-            $size-min : $font_size_min-h1,
-            $size-max : $font_size_max-h1,
-            $break-p-xxl : $break-p-xxl-h1
-    );
+    @include font-style($font-weight : $f-w-bold, $font-size : $font_size-h1);
+
+    &.title__restaurant{
+      font-family: $font-title, $font-default-title;
+    }
 
 }
 h2 {
-    @include font-style(
-            $font-weight : $font-weight-bold,
-            $size-min : $font_size_min-h1,
-            $size-max : $font_size_max-h1,
-            $break-p-xxl : $break-p-xxl-h1
-    );
+    @include font-style($font-weight : $f-w-bold, $font-size : $font_size-h2);
 }
 h3 {
-    @include font-style(
-            $font-weight : $font-weight-bold,
-            $size-min : $font_size_min-h1,
-            $size-max : $font_size_max-h1,
-            $break-p-xxl : $break-p-xxl-h1
-    );
+    @include font-style($font-weight : $f-w-bold, $font-size : $font_size-h3);
 }
 
 

@@ -10,7 +10,7 @@
 
           &::placeholder{
             color: getFontColor($input-background);
-            font-size: 1.1rem;
+            @include font-style($font-size: 1rem, $font-weight : $f-w-semibold);
           }
     }
 

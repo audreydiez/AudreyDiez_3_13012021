@@ -34,12 +34,11 @@
   }
 }
 
-@mixin font-style($font : $font-base, $fallback : $font-default, $font-weight : $font-weight-default, $size-min : $font-size-min, $size-max: $font-size-max, $break-p-xxl : $break-p-xxl){
+@mixin font-style($font : $font-base, $fallback : $font-default, $font-weight : $font-weight-base, $font-size : $font-size-base){
   font-family: $font, $fallback;
   font-weight: $font-weight;
-  font-size: fluid-font($size-min, $size-max);
-  @include breakpoint(xxl){
-    font-size: $break-p-xxl ;
-  }
+  font-size: $font-size;
 }
+
+
 

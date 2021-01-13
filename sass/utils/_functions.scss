@@ -13,18 +13,6 @@
 }
 
 
-//font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1600 - 300)));
-// Responsive Font : calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])))
-@function fluid-font($min : $font-size-min, $max : $font-size-max){
-
-  $min-stripped : strip-units(rem-to-px($min));
-  $max-stripped : strip-units(rem-to-px($max));
-  $min : (rem-to-px($min));
-
-  $font-size : calc(#{$min} + (#{$max-stripped} - #{$min-stripped}) * ((100vw - 320px) / 1080));
-  @return $font-size;
-}
-
 
 // Calcul de la couleur de la font selon son background
 @function getFontColor($background-colour){

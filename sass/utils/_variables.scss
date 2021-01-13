@@ -20,28 +20,23 @@ $tag : #99E2D0;
 // Fonts basics variables
 $font-size-base: 14px;
 $font-base: 'Roboto';
+$font-title: 'Shrikhand';
 $font-default : sans-serif;
-$font-weight-default : 100;
-$font-weight-sbold : 400;
-$font-weight-bold : 700;
-$font-size-min : 1.1rem;
-$font-size-max : 1.4rem;
-$break-p-xxl : 1.3rem;
+$font-default-title : cursive;
+
+$font-weight-base : 100;
+$f-w-semibold : 400;
+$f-w-bold : 700;
+
 
 // H1 Styles
-$font_size_min-h1 : 1.5rem;
-$font_size_max-h1 : 2.5rem;
-$break-p-xxl-h1 : 2rem;
+$font_size-h1 : 1.5rem;
 
 // H2 Styles
-$font_size_min-h2 : 1.2rem;
-$font_size_max-h2 : 1.6rem;
-$break-p-xxl-h2 : 2rem;
+$font-size-h2 : 1.2rem;
 
 // H3 Styles
-$font_size_min-h2 : 1.1rem;
-$font_size_max-h2 : 1.3rem;
-$break-p-xxl-h3 : 2rem;
+$font-size-h3 : 1.1rem;
 
 //Layout margin
 

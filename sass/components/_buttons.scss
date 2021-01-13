@@ -5,12 +5,9 @@
     color: getFontColor($colour-primary);
     border-radius: 25rem;
     text-decoration: none;
+    box-shadow:3px 3px 8px #999;
 
-    @include font-style(
-            $font-weight : $font-weight-sbold,
-            $size-min : $font_size_min,
-            $size-max : $font_size_max,
-            $break-p-xxl : $break-p-xxl
-    );
+    @include font-style($font-size: 1rem, $font-weight : $f-w-semibold);
+
 
 }
