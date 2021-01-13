@@ -1,0 +1,13 @@
+.section-cta{
+    background-color: $section-background;
+    padding: 2rem 0 3rem 0;
+    text-align: center;
+
+    &__title{
+        padding: 0 3rem;
+    }
+    &__description{
+        margin: 1rem 0 1.5rem 0;
+    }
+
+}

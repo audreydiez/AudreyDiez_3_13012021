@@ -1,0 +1,45 @@
+// BREAKPOINTS
+
+
+@mixin breakpoint($point) {
+  @if $point == xs {
+    @media (min-width: map-get($breakpoints, xs) ) {
+      @content ;
+    }
+  }
+  @else if $point == sm {
+    @media (min-width: map-get($breakpoints, sm) ) {
+      @content ;
+    }
+  }
+  @else if $point == md {
+    @media (min-width: map-get($breakpoints, md) ) {
+      @content ;
+    }
+  }
+  @else if $point == lg {
+    @media (min-width: map-get($breakpoints, lg)) {
+      @content ;
+    }
+  }
+  @else if $point == xl {
+    @media (min-width: map-get($breakpoints, xl)) {
+      @content ;
+    }
+  }
+@else if $point == xxl {
+    @media (min-width: map-get($breakpoints, xxl)) {
+      @content ;
+    }
+  }
+}
+
+@mixin font-style($font : $font-base, $fallback : $font-default, $font-weight : $font-weight-default, $size-min : $font-size-min, $size-max: $font-size-max, $break-p-xxl : $break-p-xxl){
+  font-family: $font, $fallback;
+  font-weight: $font-weight;
+  font-size: fluid-font($size-min, $size-max);
+  @include breakpoint(xxl){
+    font-size: $break-p-xxl ;
+  }
+}
+

@@ -1,0 +1,58 @@
+// Colours
+$colour-primary: #9356DC;
+$colour-secondary: #FF79DA;
+$colour-tertiary: #99E2D0;
+
+$primary-active : #F5EDFF;
+
+$background-base : #FFF;
+$input-background : #EAEAEA;
+$section-background : #F6F6F6;
+$card-background : #FFF;
+$footer-background : #353535;
+
+// Font colours
+$font-colour-light : #FFF;
+$font-colour-dark : #000;
+
+$tag : #99E2D0;
+
+// Fonts basics variables
+$font-size-base: 14px;
+$font-base: 'Roboto';
+$font-default : sans-serif;
+$font-weight-default : 100;
+$font-weight-sbold : 400;
+$font-weight-bold : 700;
+$font-size-min : 1.1rem;
+$font-size-max : 1.4rem;
+$break-p-xxl : 1.3rem;
+
+// H1 Styles
+$font_size_min-h1 : 1.5rem;
+$font_size_max-h1 : 2.5rem;
+$break-p-xxl-h1 : 2rem;
+
+// H2 Styles
+$font_size_min-h2 : 1.2rem;
+$font_size_max-h2 : 1.6rem;
+$break-p-xxl-h2 : 2rem;
+
+// H3 Styles
+$font_size_min-h2 : 1.1rem;
+$font_size_max-h2 : 1.3rem;
+$break-p-xxl-h3 : 2rem;
+
+//Layout margin
+
+$layout-margin : 1.5rem;
+
+// Breakpoint for responsive
+$breakpoints:(
+  xs: "320",
+  sm: "576px",
+  md: "768px",
+  lg: "1024px",
+  xl: "1200px",
+  xxl: "1400px"
+);

@@ -1,0 +1,17 @@
+.header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__figure{
+    flex-basis: 100%;
+    background-color: $background-base;
+    text-align: center;
+    padding: 1.3rem 0 0.8rem 0;
+  }
+  &__form{
+    flex-basis: 100%;
+    text-align: center;
+    padding: 1.2rem 0 1rem 0;
+  }
+}

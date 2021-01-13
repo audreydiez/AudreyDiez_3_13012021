@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,500&display=swap');
+
+body {
+    @include font-style();
+}
+
+h1 {
+    @include font-style(
+            $font-weight : $font-weight-bold,
+            $size-min : $font_size_min-h1,
+            $size-max : $font_size_max-h1,
+            $break-p-xxl : $break-p-xxl-h1
+    );
+
+}
+h2 {
+    @include font-style(
+            $font-weight : $font-weight-bold,
+            $size-min : $font_size_min-h1,
+            $size-max : $font_size_max-h1,
+            $break-p-xxl : $break-p-xxl-h1
+    );
+}
+h3 {
+    @include font-style(
+            $font-weight : $font-weight-bold,
+            $size-min : $font_size_min-h1,
+            $size-max : $font_size_max-h1,
+            $break-p-xxl : $break-p-xxl-h1
+    );
+}
+
+

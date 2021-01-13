@@ -1,0 +1,17 @@
+.header__form {
+    background-color: $input-background;
+    box-shadow: inset 1px 4px 9px -8px;
+
+    & .form__input{
+        background-color: $input-background;
+        border: 1px solid transparent;
+        padding-left: 0.5rem;
+        width: 125px;
+
+          &::placeholder{
+            color: getFontColor($input-background);
+            font-size: 1.1rem;
+          }
+    }
+
+}

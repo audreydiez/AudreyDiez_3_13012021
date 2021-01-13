@@ -1,0 +1,39 @@
+// Enlever les unités
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+// px to rem
+@function rem($size) {
+  @return $size / ($font-size-base) * 1rem;
+}
+// rem to px
+@function rem-to-px($size) {
+  $value: strip-units($size) * ($font-size-base);
+  @return round($value);
+}
+
+
+//font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1600 - 300)));
+// Responsive Font : calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])))
+@function fluid-font($min : $font-size-min, $max : $font-size-max){
+
+  $min-stripped : strip-units(rem-to-px($min));
+  $max-stripped : strip-units(rem-to-px($max));
+  $min : (rem-to-px($min));
+
+  $font-size : calc(#{$min} + (#{$max-stripped} - #{$min-stripped}) * ((100vw - 320px) / 1080));
+  @return $font-size;
+}
+
+
+// Calcul de la couleur de la font selon son background
+@function getFontColor($background-colour){
+  @if ( lightness($background-colour) > 60 ) {
+    @return $font-colour-dark;
+  }@else{
+    @return $font-colour-light;
+ }
+}
+
+
+
