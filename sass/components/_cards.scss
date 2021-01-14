@@ -6,13 +6,17 @@
         box-shadow: $b-shadow;
         padding: 1.2rem 0;
         margin-left: 0.5rem;
-        line-height: 1.6rem;
+        line-height: $line-height;
 
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
 
         @include font-style($font-weight : $f-w-semibold, $font-size : 0.9rem);
+
+        @include breakpoint(md){
+            @include font-style($font-weight : $f-w-semibold, $font-size : 1rem);
+        }
 
         .card__tile{
             &:nth-child(1){
@@ -43,5 +47,97 @@
             color: $colour-primary;
         }
     }
+}
 
+.restaurant-card{
+    position: relative;
+    border-radius: $card-radius;
+    background-color: $card-background;
+    box-shadow: $b-shadow;
+    line-height: $line-height;
+
+    // Ajustement des images
+    &:nth-child(1) .card-inner__img{
+        object-position: 0 50%;
+    }
+    &:nth-child(2) .card-inner__img{
+        object-position: 0 62%;
+    }
+    &:nth-child(3) .card-inner__img{
+        object-position: 0 100%;
+    }
+    &:nth-child(4) .card-inner__img{
+        object-position: 0 100%;
+    }
+
+
+    &.tag::after{
+        content: $tag-new;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: $tag;
+        color: darken($tag, 40%);
+        padding: 0.3rem 0.8rem;
+        @include font-style($font-weight : $f-w-semibold, $font-size : 0.9rem);
+
+        @include breakpoint(md){
+            padding: 0.4rem 1rem;
+            @include font-style($font-weight : $f-w-semibold, $font-size : 1rem);
+        }
+    }
+
+
+    & .card-inner{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+
+        &__img{
+            flex-basis: 100%;
+            height: 175px;
+            border-radius: $card-radius $card-radius 0 0;
+            object-fit: cover;
+
+            @include breakpoint(lg) {
+                height: 225px;
+            }
+            @include breakpoint(xl) {
+                height: 275px;
+            }
+
+        }
+
+
+        &__description{
+            position: relative;
+            flex-basis: 100%;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .title{
+                flex-basis: 100%;
+                margin: 1rem 0 0 1rem;
+            }
+            .whishlist{
+                position: absolute;
+                width: 80px;
+                height: 60px;
+                right: 0;
+            }
+            .district{
+                flex-basis: 100%;
+                margin: 0 0 1rem 1rem;
+            }
+
+
+        }
+
+
+
+
+    }
 }

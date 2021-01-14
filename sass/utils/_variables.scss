@@ -23,7 +23,7 @@ $b-shadow : 3px 3px 8px #D3D3D3;
 $b-shadow-hover : 3px 3px 8px #666;
 
 // Fonts basics variables
-$font-size-base: 14px;
+$font-size-base: 1rem;
 $font-base: 'Roboto';
 $font-title: 'Shrikhand';
 $font-default : sans-serif;
@@ -32,6 +32,8 @@ $font-default-title : cursive;
 $font-weight-base : 100;
 $f-w-semibold : 400;
 $f-w-bold : 700;
+
+$line-height : 1.6rem;
 
 
 // H1 Styles
@@ -56,3 +58,9 @@ $breakpoints:(
   xl: "1200px",
   xxl: "1400px"
 );
+
+// Cards style
+$card-radius : 20px;
+
+//tags
+$tag-new: "Nouveau";
