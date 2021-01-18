@@ -8,6 +8,7 @@ $primary-active : #F5EDFF;
 $background-base : #FFF;
 $input-background : #EAEAEA;
 $section-background : #F6F6F6;
+$section-rst-detail : #F4F4F4;
 $card-background : #FFF;
 $footer-background : #353535;
 
@@ -41,9 +42,13 @@ $font_size-h1 : 1.5rem;
 
 // H2 Styles
 $font-size-h2 : 1.4rem;
+$font-size-h2-menu : 0.8rem;
 
 // H3 Styles
 $font-size-h3 : 1.1rem;
+
+// Special font size
+
 
 //Layout margin
 
@@ -60,7 +65,9 @@ $breakpoints:(
 );
 
 // Cards style
+$card-radius-s : 15px;
 $card-radius : 20px;
+$card-radius-lg : 25px;
 
 //tags
 $tag-new: "Nouveau";

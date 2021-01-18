@@ -13,14 +13,70 @@ h1 {
     @include font-style($font-weight : $f-w-bold, $font-size : $font_size-h1);
 
     &.title__restaurant{
+        padding: 2rem 1rem 0 1rem;
       font-family: $font-title, $font-default-title;
+        @include breakpoint(xl){
+            text-align: center;
+            padding: 3rem 0 2rem 0;
+        }
+
     }
 
 }
 h2 {
     @include font-style($font-weight : $f-w-bold, $font-size : $font_size-h2);
+
+    &.menu-title{
+        position: relative;
+        @include font-style($font-size : $font-size-h2-menu);
+        text-transform: uppercase;
+        padding-bottom: 0.1rem;
+
+        &:after{
+            content : "";
+            position: absolute;
+            left    : 0;
+            bottom  : 0;
+            height  : 1px;
+            width   : 10%;
+            border-bottom:2px solid $colour-tertiary;
+        }
+
+
+    }
 }
 h3 {
     @include font-style($font-weight : $f-w-bold, $font-size : $font_size-h3);
+
+    &.dish-title{
+        @include font-style($font-weight : $f-w-semibold, $font-size : 0.9rem);
+
+        @include breakpoint(sm){
+            @include font-style($font-weight : $f-w-semibold, $font-size : 1rem);
+        }
+
+    }
 }
 
+.dish-description{
+    @include font-style($font-size : 0.8rem);
+
+    @include breakpoint(sm){
+        @include font-style($font-size : 0.9rem);
+    }
+    @include breakpoint(md){
+        @include font-style($font-size : $font-size-base);
+    }
+
+
+}
+.dish-price{
+    @include font-style($font-weight : $f-w-semibold, $font-size : 0.8rem);
+
+    @include breakpoint(sm){
+        @include font-style($font-weight : $f-w-semibold, $font-size : 0.9rem);
+    }
+    @include breakpoint(md){
+        @include font-style($font-weight : $f-w-semibold, $font-size : $font-size-base);
+    }
+}

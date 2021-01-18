@@ -4,119 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="sass/main.scss">
+    <link rel="stylesheet" href="../sass/main.scss">
     <title>OhMyFood</title>
 
 </head>
 <body>
-<header class="header">
-    <figure class="header__figure">
-        <img class="figure--img" src="public/img/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
-    </figure>
-    <form class="header__form form">
-        <i class="form__icon fas fa-map-marker-alt fa-lg"></i>
-        <input class="form__input" type="text" placeholder="Paris, Belleville">
-    </form>
+<header class="header-nav">
+    <nav class="header-nav__bar">
+        <a href="../index.html" class="btn-return"><i class="fas fa-arrow-left fa-lg"></i></a>
+        <figure class="nav-logo">
+            <img src="../public/img/logo/ohmyfood.png" alt="OhMyFood">
+        </figure>
+    </nav>
 </header>
 
-<section class="section-cta">
-    <h1 class="section-cta__title">Réservez le menu qui vous convient</h1>
-    <p class="section-cta__description">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-    <a class="btn-cta" href="#">Explorer nos restaurants</a>
+<div class="section-rst-detail">
+    <figure class="section-rst-detail__img">
+        <img src="../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût"/>
+    </figure>
+</div>
+
+<section class="section-rst-menu">
+    <h1 class="title__restaurant">La palette du goût</h1>
+    <div class="whishlist">
+        <svg width="40" height="40" viewBox="0 0 40 40" class='whishlist__heart'>
+            <path d="M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z"/>
+        </svg>
+    </div>
+
+    <div class="dishes">
+        <div class="dishes-list">
+            <h2 class="menu-card menu-title">Entrées</h2>
+            <div class="menu-card menu-card--styled">
+                <div class="menu-card__col col-1">
+                    <h3 class="dish-title">Fricassée d'escargots</h3>
+                    <span class="dish-description">Au piment d'espelette</span>
+                </div>
+                <div class="menu-card__col col-2">
+                    <span class="dish-price">25€</span>
+                </div>
+                <div class="menu-card__col col-3">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+            <div class="menu-card menu-card--styled">
+                <div class="menu-card__col col-1">
+                    <h3 class="dish-title">Foie gras de canard mi-cuit</h3>
+                    <span class="dish-description">Et ses copeaux de truffe noire</span>
+                </div>
+                <div class="menu-card__col col-2">
+                    <span class="dish-price">35€</span>
+                </div>
+                <div class="menu-card__col col-3">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+            <div class="menu-card menu-card--styled menu-card--selected">
+                <div class="menu-card__col col-1">
+                    <h3 class="dish-title">Oeuf au plat</h3>
+                    <span class="dish-description">Assaisonné à la truffe sur lit de  de de caviar</span>
+                </div>
+                <div class="menu-card__col col-2">
+                    <span class="dish-price">25€</span>
+                </div>
+                <div class="menu-card__col col-3">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+        </div>
+        <div class="dishes-list">
+            <h2 class="menu-card menu-title">Entrées</h2>
+            <div class="menu-card menu-card--styled">
+                <div class="menu-card__col col-1">
+                    <h3 class="dish-title">Fricassée d'escargots</h3>
+                    <span class="dish-description">Au piment d'espelette</span>
+                </div>
+                <div class="menu-card__col col-2">
+                    <span class="dish-price">25€</span>
+                </div>
+                <div class="menu-card__col col-3">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+            <div class="menu-card menu-card--styled">
+                <div class="menu-card__col col-1">
+                    <h3 class="dish-title">Foie gras de canard mi-cuit</h3>
+                    <span class="dish-description">Et ses copeaux de truffe noire</span>
+                </div>
+                <div class="menu-card__col col-2">
+                    <span class="dish-price">35€</span>
+                </div>
+                <div class="menu-card__col col-3">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+            <div class="menu-card menu-card--styled menu-card--selected">
+                <div class="menu-card__col col-1">
+                    <h3 class="dish-title">Oeuf au plat</h3>
+                    <span class="dish-description">Assaisonné à la truffe sur lit de  de de caviar</span>
+                </div>
+                <div class="menu-card__col col-2">
+                    <span class="dish-price">25€</span>
+                </div>
+                <div class="menu-card__col col-3">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+        </div>
+        <div class="dishes-list">
+            <h2 class="menu-card menu-title">Entrées</h2>
+            <div class="menu-card menu-card--styled">
+                <div class="menu-card__col col-1">
+                    <h3 class="dish-title">Fricassée d'escargots</h3>
+                    <span class="dish-description">Au piment d'espelette</span>
+                </div>
+                <div class="menu-card__col col-2">
+                    <span class="dish-price">25€</span>
+                </div>
+                <div class="menu-card__col col-3">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+            <div class="menu-card menu-card--styled">
+                <div class="menu-card__col col-1">
+                    <h3 class="dish-title">Foie gras de canard mi-cuit</h3>
+                    <span class="dish-description">Et ses copeaux de truffe noire</span>
+                </div>
+                <div class="menu-card__col col-2">
+                    <span class="dish-price">35€</span>
+                </div>
+                <div class="menu-card__col col-3">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+            <div class="menu-card menu-card--styled menu-card--selected">
+                <div class="menu-card__col col-1">
+                    <h3 class="dish-title">Oeuf au plat</h3>
+                    <span class="dish-description">Assaisonné à la truffe sur lit de  de de caviar</span>
+                </div>
+                <div class="menu-card__col col-2">
+                    <span class="dish-price">25€</span>
+                </div>
+                <div class="menu-card__col col-3">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+        </div>
+        <div class="dishes-list">
+            <div class="dishes-list__order">
+                <a class="btn-cta btn-cta--large" href="#">Commander</a>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="section-tutorial">
-    <h2 class="section-tutorial__card">Fonctionnement</h2>
-
-    <div class="section-tutorial__card card--styled">
-        <div class="card__tile card__number">1</div>
-        <div class="card__tile"><i class="fas fa-mobile-alt fa-lg"></i></div>
-        <div class="card__tile">Choisissez un restaurant</div>
-    </div>
-
-    <div class="section-tutorial__card card--styled">
-        <div class="card__tile card__number">2</div>
-        <div class="card__tile"><i class="fas fa-list fa-lg"></i></div>
-        <div class="card__tile">Composez votre menu</div>
-    </div>
-    <div class="section-tutorial__card card--styled card--active">
-        <div class="card__tile card__number">3</div>
-        <div class="card__tile"><i class="fas fa-store fa-lg"></i></div>
-        <div class="card__tile">Dégustez au restaurant</div>
-    </div>
-</section>
-
-<section class="section-restaurants">
-    <h2>Restaurants</h2>
-    <div class="section-restaurants__list">
-        <a href="/restaurants/la_palette_du_gout.html" class="restaurant-card tag">
-            <article>
-                <figure class="card-inner">
-                    <img class="card-inner__img" src="public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                    <figcaption class="card-inner__description">
-                        <h3 class="title">La palette du goût</h3>
-                        <div class="whishlist">
-                            <svg width="40" height="40" viewBox="0 0 40 40" class='whishlist__heart'>
-                                <path d="M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z"/>
-                            </svg>
-                        </div>
-                        <span class="district">Ménilmontant</span>
-                    </figcaption>
-                </figure>
-            </article>
-        </a>
-        <a href="restaurants/la_note_enchantee.html" class="restaurant-card tag">
-            <article>
-                <div class="tag tag--new"></div>
-                <figure class="card-inner">
-                    <img class="card-inner__img" src="public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-                    <figcaption class="card-inner__description">
-                        <h3 class="title">La note enchantée</h3>
-                        <div class="whishlist">
-                            <svg width="40" height="40" viewBox="0 0 40 40" class='whishlist__heart'>
-                                <path d="M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z"/>
-                            </svg>
-                        </div>
-                        <span class="district">Charonne</span>
-                    </figcaption>
-                </figure>
-            </article>
-        </a>
-        <a href="restaurants/a_la_francaise.html" class="restaurant-card">
-            <article>
-                <figure class="card-inner">
-                    <img class="card-inner__img" src="public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
-                    <figcaption class="card-inner__description">
-                        <h3 class="title">À la française</h3>
-                        <div class="whishlist">
-                            <svg width="40" height="40" viewBox="0 0 40 40" class='whishlist__heart'>
-                                <path d="M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z"/>
-                            </svg>
-                        </div>
-                        <span class="district">Cité Rouge</span>
-                    </figcaption>
-                </figure>
-            </article>
-        </a>
-        <a href="restaurants/le_delice_des_sens.html" class="restaurant-card">
-            <article>
-                <figure class="card-inner">
-                    <img class="card-inner__img" src="public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
-                    <figcaption class="card-inner__description">
-                        <h3 class="title">Le délice des sens</h3>
-                        <div class="whishlist">
-                            <svg width="40" height="40" viewBox="0 0 40 40" class='whishlist__heart'>
-                                <path d="M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z"/>
-                            </svg>
-                        </div>
-                        <span class="district">Folie-Méricourt</span>
-                    </figcaption>
-                </figure>
-            </article>
-        </a>
-    </div>
-
-</section>
 
 <footer class="footer">
     <ul class="footer__list">
@@ -160,6 +201,8 @@
 
 
 </footer>
+
+
 
 </body>
 <script src="https://kit.fontawesome.com/5e0fd3479d.js" crossorigin="anonymous"></script>

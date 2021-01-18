@@ -73,3 +73,104 @@
 
     }
 }
+
+.section-rst-detail{
+    width: 100%;
+    height: 230px;
+    &__img {
+        height: 100%;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+
+    @include breakpoint(md){
+        height: 280px;
+        &__img img{
+            object-position: center 70%;
+        }
+    }
+    @include breakpoint(xl){
+        height: 300px;
+        &__img img{
+            object-position: center 60%;
+        }
+    }
+}
+
+.section-rst-menu{
+    position: relative;
+    z-index: 1;
+    background-color: $section-rst-detail;
+    width: calc(100%);
+    border-radius: $card-radius-lg;
+    margin-top: -2rem;
+
+
+    .whishlist{
+        position: absolute;
+        width: 70px;
+        height: 60px;
+        right: 0;
+        top: 0.5rem;
+
+        @include breakpoint(md){
+            width: 100px;
+        }
+        @include breakpoint(xl){
+            width: 150px;
+            top: 1.5rem;
+        }
+    }
+
+    .dishes{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+
+
+        .dishes-list{
+            padding: 1rem 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+            flex-basis: 100%;
+
+            @include breakpoint(md){
+                flex-basis: calc(50% - 2rem);
+            }
+            @include breakpoint(xl){
+                flex-basis: calc(33.33333% - 2rem);
+
+                &:nth-child(4){
+                    flex-basis: 100%;
+                    padding: 4rem 0;
+                }
+            }
+
+            & .menu-card{
+
+                flex-basis: 100%;
+                margin: 0.5rem 0;
+            }
+            &__order{
+                flex-basis: 100%;
+                text-align: center;
+                align-self: center;
+
+
+            }
+        }
+
+    }
+
+
+
+
+}
