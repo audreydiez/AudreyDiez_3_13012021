@@ -10,9 +10,7 @@
     "sass": "^1.32.4"
   },
   "scripts": {
-    "start": "parcel serve index.html",
-    "build": "parcel build ./src/index.html --no-minify --public-url ./",
-    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    "build": "parcel build index.html restaurants/la_palette_du_gout.html --no-minify --public-url ./"
   },
   "browserslist": "> 0.2%",
   "repository": {
