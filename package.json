@@ -2,7 +2,6 @@
   "name": "AudreyDiez_3_13012021",
   "version": "1.0.0",
   "description": "Dynamisez une page web avec des animations CSS",
-  "main": "index.js",
   "dependencies": {
     "parcel": "^2.0.0-beta.1"
   },
@@ -11,8 +10,8 @@
   },
   "scripts": {
     "start": "parcel serve index.html",
-    "build": "parcel build ./src/index.html --no-minify --public-url ./",
-    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    "build": "parcel build index.html",
+    "deploy": "npm run build && git subtree push --prefix dist origin gh-pages"
   },
   "browserslist": "> 0.2%",
   "repository": {
