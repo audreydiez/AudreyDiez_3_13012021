@@ -9,12 +9,8 @@
         flex-direction: row;
         flex-wrap: wrap;
 
-
-
         li{
             flex-basis: 100%;
-
-
         }
 
         .footer__link{
@@ -27,11 +23,7 @@
                 justify-content: center;
             }
 
-
-
             margin: 0.1rem 0;
-
-
 
             &:hover{
                 @include font-style($font-weight : $f-w-semibold, $font-size : 1.1rem);
