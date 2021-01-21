@@ -46,4 +46,31 @@
 
     }
 
+    &__detail{
+        width: 100%;
+        height: 230px;
+        .detail__img {
+            height: 100%;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+
+        @include breakpoint(md){
+            height: 280px;
+            &__img img{
+                object-position: center 70%;
+            }
+        }
+        @include breakpoint(xl){
+            height: 300px;
+            &__img img{
+                object-position: center 60%;
+            }
+        }
+    }
+
 }

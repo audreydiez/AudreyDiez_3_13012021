@@ -53,16 +53,10 @@
     }
 
     &__logo{
-        width: 100px;
-        padding-bottom: 1rem;
-        & .logo--white{
-            fill: $background-base;
-        }
+
 
         @include breakpoint(md) {
-            width: 150px;
-            display: block;
-            margin: auto;
+            text-align: center;
 
         }
     }

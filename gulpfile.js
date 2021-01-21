@@ -27,8 +27,7 @@ function browsersyncReload(cb){
 }
 
 function watchTask(){
-    watch('*.html', browsersyncReload);
-    watch('restaurants/*.html', browsersyncReload);
+    watch('**/*.html', browsersyncReload);
     watch(['sass/**/*.scss'], series(scssTask, browsersyncReload));
 }
 

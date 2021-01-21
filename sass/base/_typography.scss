@@ -44,6 +44,14 @@ h2 {
 
 
     }
+    &.footer__logo{
+        padding: 1rem 0;
+        font-family: $font-title, $font-default-title;
+        @include breakpoint(xl){
+            padding: 3rem 0 2rem 0;
+        }
+
+    }
 }
 h3 {
     @include font-style($font-weight : $f-w-bold, $font-size : $font_size-h3);
