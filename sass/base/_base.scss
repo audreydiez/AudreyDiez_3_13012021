@@ -1,7 +1,184 @@
 body {
     line-height: 1.4rem;
     box-sizing: border-box;
-    background-color: bisque;
     width: 100%;
     color: getFontColor($background-base);
+
+
 }
+
+.opening{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: $background-base;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    animation: PageTransition 2s forwards;
+
+
+    animation-delay: 5s;
+    &--fast{
+        animation-delay: 3s;
+    }
+
+    svg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 60%;
+    }
+
+}
+
+
+
+
+.o, .h, .m, .y, .f, .o2, .o3, .d{
+    fill: transparent;
+    stroke: #000;
+    //stroke-width: 1;
+    //fill: url(#heart-gradient) $colour-primary;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    //transform-origin: bottom;
+    animation: Dash 3s forwards, FadeOut 600ms forwards;
+}
+
+.o{
+    animation-delay: 1s, 2.2s;
+}
+.h{
+    animation-delay: 1.2s, 2.3s;
+}
+.m{
+    animation-delay: 1.3s, 2.4s;
+}
+.y{
+    animation-delay: 1.4s, 2.5s;
+}
+.f{
+    animation-delay: 1.5s, 2.6s;
+}
+.o2{
+    animation-delay: 1.6s, 2.7s;
+}
+.o3{
+    animation-delay: 1.7s, 2.8s;
+}
+.d{
+    animation-delay: 1.8s, 2.9s;
+}
+
+
+$size: 2vh;
+$num-bars: 5;
+
+
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+        &__bar{
+        width: 10px;
+        height: 0;
+        background-image: linear-gradient($colour-secondary, $colour-primary);
+        margin: 0 0.2rem;
+        animation:
+                StartBars 1000ms forwards ease-in-out,
+                Bars 800ms backwards infinite ease-in-out alternate,
+                FadeOut 500ms forwards;
+        @for $i from 1 through $num-bars {
+            &--#{$i} {
+                animation-delay: 3.5s, 200ms * $i, 5.3s;
+                &.fast{
+                    animation-delay: 500ms, 200ms * $i, 2.7s;
+                }
+            }
+        }
+    }
+}
+
+.loader-2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &__bar{
+        width: 10px;
+        height: 0;
+        background-image: linear-gradient($colour-secondary, $colour-primary);
+        margin: 0 0.2rem;
+        animation:
+
+                Bars 800ms backwards infinite ease-in-out alternate,
+                FadeOut 500ms forwards;
+        @for $i from 1 through $num-bars {
+            &--#{$i} {
+                animation-delay:  200ms * $i, 2.8s;
+            }
+        }
+    }
+}
+
+@keyframes PageTransition {
+    0%{
+        opacity: 1;
+
+    }
+    90%{
+        opacity: 0;
+        position: fixed;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+        position: relative;
+    }
+}
+@keyframes StartBars {
+
+    to{
+        height: 50px;
+    }
+}
+
+@keyframes Bars {
+    0% {
+        transform: scaleY(0.5);
+    }
+    100% {
+        transform: scaleY(1.0);
+    }
+}
+
+@keyframes Dash {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes FadeOut {
+    to{
+        opacity: 0;
+    }
+}
+
