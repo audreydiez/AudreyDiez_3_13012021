@@ -176,6 +176,8 @@
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
+            transition: all 0.5s ease-in;
+
 
             .col-1{
                 flex-grow: 1;
@@ -191,31 +193,55 @@
                 align-self: flex-end;
             }
             .col-3{
-                display: none;
+
                 position: relative;
 
-                flex-basis: 20%;
+                flex-basis: 0%;
+
+
                 height: 100%;
                 border-radius: 0 $card-radius-s $card-radius-s 0;
                 background-color: $colour-tertiary;
+
+                transition: flex-basis 500ms ease-in-out;
+
+                overflow: hidden;
 
                 i{
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%) rotate(0);
                     color: $background-base;
+                    transition: transform 400ms ease-in-out;
+                    transition-delay: 100ms;
+
+
+                }
+            }
+
+
+            &:hover{
+                .col-3{
+                    flex-basis: 20%;
+                }
+                i{
+                    transform: translate(-50%, -50%) rotate(360deg);
+
 
                 }
 
             }
-        }
-        &--selected{
-
-            .col-3{
-                display: block;
+            &:not(:hover){
+                i{
+                    transition: none;
+                }
             }
         }
+
+
+
+
     }
 
 

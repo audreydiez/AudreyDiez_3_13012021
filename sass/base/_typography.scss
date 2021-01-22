@@ -40,6 +40,24 @@ h2 {
             height  : 1px;
             width   : 10%;
             border-bottom:2px solid $colour-tertiary;
+
+            @include breakpoint(md){
+                left    : 50%;
+                bottom  : 0;
+                transform: translate(-50%,0);
+            }
+            @include breakpoint(xl){
+                text-align: left;
+                left    : 0;
+                transform: translate(0,0);
+            }
+        }
+
+        @include breakpoint(md){
+            text-align: center;
+        }
+        @include breakpoint(md){
+            text-align: left;
         }
 
 
