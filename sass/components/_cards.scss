@@ -59,6 +59,8 @@
     box-shadow: $b-shadow;
     line-height: $line-height;
 
+    transition: transform 200ms ease-in-out;
+
     // Ajustement des images
     &:nth-child(1) .card-inner__img{
         object-position: 0 55%;
@@ -72,7 +74,6 @@
     &:nth-child(4) .card-inner__img{
         object-position: 0 100%;
     }
-
 
     &.tag::after{
         content: $tag-new;
@@ -165,12 +166,28 @@
             }
         }
     }
+
+    &:hover{
+        transform: scale(1.02);
+    }
 }
 
 
 
 .section-rst-menu{
-    .menu-card{
+
+
+    div.menu-card{
+        opacity: 0;
+        @for $i from 1 through $num-menu-card--styled {
+            &--#{$i} {
+                animation: MenucardsFadeIn 600ms forwards ease-in-out;
+
+                animation-delay: 2600ms + 200ms *$i ;
+            }
+        }
+
+
         &--styled{
             background-color: $card-background;
             border-radius: $card-radius-s;
@@ -180,7 +197,6 @@
             flex-direction: row;
             flex-wrap: nowrap;
             transition: all 0.5s ease-in;
-
 
             .col-1{
                 flex-grow: 1;
@@ -198,9 +214,7 @@
             .col-3{
 
                 position: relative;
-
                 flex-basis: 0%;
-
 
                 height: 100%;
                 border-radius: 0 $card-radius-s $card-radius-s 0;
@@ -218,11 +232,8 @@
                     color: $background-base;
                     transition: transform 400ms ease-in-out;
                     transition-delay: 100ms;
-
-
                 }
             }
-
 
             &:hover{
                 .col-3{
@@ -230,11 +241,9 @@
                 }
                 i{
                     transform: translate(-50%, -50%) rotate(360deg);
-
-
                 }
-
             }
+
             &:not(:hover){
                 i{
                     transition: none;
@@ -242,13 +251,19 @@
             }
         }
 
-
-
-
     }
 
 
 }
 
 
-
+@keyframes MenucardsFadeIn {
+    0%{
+        transform: translate(0, 15px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
