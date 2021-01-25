@@ -22,7 +22,7 @@ body {
 
     animation-delay: 5s;
     &--fast{
-        animation-delay: 2.5s;
+        animation-delay: 1s;
     }
 
     svg{
@@ -111,34 +111,7 @@ $num-bars: 5;
     }
 }
 
-.loader-2{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    &__bar{
-        width: 10px;
-        height: 0;
-        background-image: linear-gradient($colour-secondary, $colour-primary);
-        margin: 0 0.2rem;
-        animation:
-
-                Bars 800ms backwards infinite ease-in-out alternate,
-                FadeOut 500ms forwards;
-        @for $i from 1 through $num-bars {
-            &--#{$i} {
-                animation-delay:  200ms * $i, 2.8s;
-            }
-        }
-    }
-}
 
 @keyframes PageTransition {
     0%{

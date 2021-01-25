@@ -15,7 +15,7 @@ h1 {
     &.title__restaurant{
         padding: 2rem 1rem 0 1rem;
       font-family: $font-title, $font-default-title;
-        @include breakpoint(xl){
+        @include breakpoint(md){
             text-align: center;
             padding: 3rem 0 2rem 0;
         }
@@ -56,7 +56,7 @@ h2 {
         @include breakpoint(md){
             text-align: center;
         }
-        @include breakpoint(md){
+        @include breakpoint(xl){
             text-align: left;
         }
 

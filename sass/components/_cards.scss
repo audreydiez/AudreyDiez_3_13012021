@@ -44,7 +44,7 @@
         }
 
     }
-    &:hover{
+    &:not(h2):hover{
         background-color: $primary-active;
         i{
             color: $colour-primary;
@@ -183,7 +183,7 @@
             &--#{$i} {
                 animation: MenucardsFadeIn 600ms forwards ease-in-out;
 
-                animation-delay: 2600ms + 200ms *$i ;
+                animation-delay: 1000ms + 200ms *$i ;
             }
         }
 

@@ -88,7 +88,7 @@
                     margin-right: 1rem;
                 }
             }
-            @include breakpoint(md){
+            @include breakpoint(xl){
                 flex-basis: calc(25% - 0.75rem);
 
                 &:nth-child(odd){
@@ -176,6 +176,9 @@
             flex-wrap: wrap;
             flex-direction: row;
 
+
+            align-content:flex-start;
+
             flex-basis: 100%;
 
             @include breakpoint(md){
@@ -200,6 +203,8 @@
 
                 flex-basis: 100%;
                 margin: 0.5rem 0;
+
+
 
 
             }
