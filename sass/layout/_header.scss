@@ -57,6 +57,13 @@
                 object-fit: cover;
                 object-position: center center;
             }
+
+            .note-enchantee{
+                object-position: center 30%;
+            }
+            .a-la-francaise{
+                object-position: 0 0;
+            }
         }
 
         @include breakpoint(md){
