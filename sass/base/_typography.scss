@@ -75,6 +75,8 @@ h3 {
     @include font-style($font-weight : $f-w-bold, $font-size : $font_size-h3);
 
     &.dish-title{
+        overflow: hidden;
+        text-overflow: ellipsis;
         @include font-style($font-weight : $f-w-semibold, $font-size : 0.9rem);
 
         @include breakpoint(sm){

@@ -112,7 +112,6 @@
 
         }
 
-
         &__description{
             position: relative;
             flex-basis: 100%;
@@ -173,7 +172,6 @@
 
 .section-rst-menu{
 
-
     div.menu-card{
         opacity: 0;
         @for $i from 1 through $num-menu-card--styled {
@@ -183,7 +181,6 @@
                 animation-delay: 1000ms + 200ms *$i ;
             }
         }
-
 
         &--styled{
             background-color: $card-background;
@@ -209,7 +206,6 @@
                 align-self: flex-end;
             }
             .col-3{
-
                 position: relative;
                 flex-basis: 0%;
 
@@ -249,8 +245,6 @@
         }
 
     }
-
-
 }
 
 
